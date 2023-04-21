@@ -187,6 +187,10 @@ h1,h2,h3,h4{
     margin-bottom: 85px;
 }
 
+.last{
+    margin-bottom: 40px;
+}
+
 .content__h1{
     color: #282b2f;
     font-size: 44px;
@@ -342,6 +346,7 @@ h1,h2,h3,h4{
 
 .sidebar__posts{
     margin: 40px 0;
+    list-style: none;
     display: flex;
     flex-direction: column;
 }
@@ -351,8 +356,13 @@ h1,h2,h3,h4{
     margin-bottom: 30px;
 }
 
-.posts__post:first{
-    margin: 30px 0;
+.posts__post:last-child{
+    border: none;
+    margin: 0;
+}
+
+.posts__post:last-child .post__link{
+    margin: 0;
 }
 
 .post__image{
@@ -395,34 +405,28 @@ h1,h2,h3,h4{
     transition: 0.3s ease-out;
 }
 
-.posts__all{
+.btn__all{
     border-radius: 5px;
     border: 2px solid #009688;
     background-color: #ffffff;
+    width: 100%;
     height: 52px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 55px;
-}
-
-.all__link{
-    display: block;
-    text-decoration: none;
     color: #009688;
     font-size: 18px;
     font-weight: 500;
     background-color: transparent;
 }
 
-.all__link:hover{
+.btn__all:hover{
+    cursor: pointer;
     text-decoration: underline;
     color: #35b9ac;
-    transition: 0.3s ease-out;
-}
-
-.all__link:hover > .posts__all{
     border: 2px solid #35b9ac;
+    transition: 0.3s ease-out;
 }
 
 .sidebar__contact{
