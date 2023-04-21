@@ -253,6 +253,11 @@ h1,h2,h3,h4{
     line-height: 1.75;
 }
 
+.list__link:hover{
+    color: #6ca0d3;
+    transition: .3s ease;
+}
+
 .content__h4{
     color: #282b2f;
     font-size: 22px;
@@ -385,6 +390,11 @@ h1,h2,h3,h4{
     margin-bottom: 25px;
 }
 
+.post__link:hover{
+    color: #35b9ac;
+    transition: 0.3s ease-out;
+}
+
 .posts__all{
     border-radius: 5px;
     border: 2px solid #009688;
@@ -407,6 +417,12 @@ h1,h2,h3,h4{
 
 .all__link:hover{
     text-decoration: underline;
+    color: #35b9ac;
+    transition: 0.3s ease-out;
+}
+
+.all__link:hover > .posts__all{
+    border: 2px solid #35b9ac;
 }
 
 .sidebar__contact{
@@ -448,6 +464,8 @@ h1,h2,h3,h4{
     padding-top: 10px;
     overflow-y:initial;
     resize: none;
+    display: block;
+    margin-bottom: 40px;4
 }
 
 .contact__btn{
