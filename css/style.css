@@ -219,6 +219,14 @@ a:hover{
 }
 
 .content__container-last{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e0e9f0;
+    margin-bottom: 40px;
+}
+
+.content__container-table{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #e0e9f0;
     margin-bottom: 40px;
 }
 
@@ -333,6 +341,14 @@ a:hover{
 
 .nlist__item:last-child::after{
     content: '.';
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.content__table{
+    text-align: center;
 }
 
 .sidebar{
