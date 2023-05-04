@@ -12,18 +12,21 @@ h1,h2,h3,h4{
 }
 
 a{
-    margin: 0;
-    padding: 0;
-    color: #009688;
-    display: inline-block;
+    color: #1976d2;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1.625;
-    transition: all 0.3s ease-in-out;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.75;
+    transition: all .3s ease-in-out;
 }
 
 a:hover{
-    color: #35b9ac;
+    color: #6ca0d3;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -58,7 +61,7 @@ a:hover{
 }
 
 .contact-info{
-    padding-right: 17px;
+    padding-right: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,10 +88,11 @@ a:hover{
 .contact-info__content{
     text-decoration: none;
     color: #282b2f;
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
     margin-bottom: 8px;
+    font-style: normal;
 }
 
 .contact-info__content:last-child{
@@ -96,6 +100,7 @@ a:hover{
 }
 
 .contact-info__content:hover{
+    color: #282b2f;
     text-decoration: underline;
 }
 
@@ -123,6 +128,7 @@ a:hover{
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    font-style: normal;
     color: #282b2f;
     line-height: 2.8;
     position: relative;
@@ -160,6 +166,7 @@ a:hover{
 }
 
 .main{
+    flex: 1 1 auto;
     padding: 15px 15px 0;
     box-sizing: border-box;
 }
@@ -191,9 +198,11 @@ a:hover{
 
 .breadcrumbs__link{
     text-decoration: none;
+    font-style: normal;
     color: #282b2f;
     font-weight: 300;
     font-size: 13px;
+    line-height: 1.6;
 }
 
 .breadcrumbs__current{
@@ -219,15 +228,19 @@ a:hover{
 }
 
 .content__container-last{
-    padding-bottom: 40px;
+    padding-bottom: 31px;
     border-bottom: 1px solid #e0e9f0;
     margin-bottom: 40px;
 }
 
 .content__container-table{
-    padding-bottom: 50px;
+    padding-bottom: 44px;
     border-bottom: 1px solid #e0e9f0;
     margin-bottom: 40px;
+}
+
+.content__container-table h4{
+    margin-bottom: 19px;
 }
 
 .content__h1{
@@ -294,18 +307,6 @@ a:hover{
     left: -25px;
 }
 
-.list__link{
-    color: #1976d2;
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 1.75;
-    transition: all .3s ease-in-out;
-}
-
-.list__link:hover{
-    color: #6ca0d3;
-}
 
 .content__h4{
     color: #282b2f;
@@ -349,6 +350,103 @@ a:hover{
 
 .content__table{
     text-align: center;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.content__table th{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.1;
+    padding-bottom: 10px;
+}
+
+.content__table td{
+    padding: 17px 20px;
+    font-weight: 400;
+}
+
+.content__table tbody tr:nth-child(2n + 1){
+    background-color: #f8f8f8;
+}
+
+.content__container-tabs{
+    padding: 0 0 67px 0;
+}
+
+.content__container-tabs h4{
+    margin-bottom: 38px;
+}
+
+.tabs__items{
+    display: flex;
+    position: relative;
+    margin-bottom: 17px;
+}
+
+.tabs__items::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #009688;
+    bottom: 0;
+    left: 0;
+}
+
+.tabs__item{
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    max-height: 58px;
+    padding: 19px 20px;
+    line-height: 1;
+    font-style: normal;
+    color: #009688;
+    text-decoration: none;
+    border: 2px solid #009688;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-right: 4px;
+}
+
+.tabs__item:hover{
+    color: #fff;
+    background-image: linear-gradient(
+        to right, red, orange, yellow,green, blue, indigo, violet, red);
+    animation:slidebgtabs 2s reverse infinite;
+}
+
+@keyframes slidebgtabs {
+    to {
+      background-position:15vw;
+    }
+}
+
+.tabs__item:nth-child(1){
+    color: #fff;
+    background-color: #009688;
+}
+
+.tabs__body{
+
+}
+
+.tabs__block{
+    position: relative;
+    display: none;
+}
+
+.tabs__block:nth-child(2){
+    background-color: #009688;
+    color: #fff;
+}
+
+.tabs__block:target{
+    display: block;
 }
 
 .sidebar{
@@ -459,7 +557,20 @@ a:hover{
 }
 
 .post__link{
+    margin: 0;
+    padding: 0;
+    color: #009688;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.625;
+    transition: all 0.3s ease-in-out;
     margin-bottom: 25px;
+}
+
+.post__link:hover{
+    color: #35b9ac;
 }
 
 .btn__all{
@@ -471,7 +582,7 @@ a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 51px;
+    padding: 0 52px;
     color: #009688;
     font-size: 18px;
     font-weight: 500;
@@ -487,7 +598,7 @@ a:hover{
 }
 
 .all__image{
-    padding-right: 4px;
+    padding-right: 2px;
 }
 
 .sidebar__contact{
@@ -514,7 +625,7 @@ a:hover{
     border-radius: 5px;
     border: 2px solid #e0e9f0;
     background-color: #ffffff;
-    padding: 2px 17px 0;
+    padding: 2px 18px 0;
     margin-bottom: 16px;
     outline: none;
     overflow: hidden;
@@ -561,4 +672,75 @@ a:hover{
 
 .img{
     border-radius: 5px;
+}
+
+.footer{
+    border-top: 1px solid #e0e9f0;
+    padding: 37px 15px;
+}
+
+.footer__box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__items{
+    padding-top: 2px;
+}
+
+.social__item{
+    text-decoration: none;
+    color: transparent;
+    font-size: 0;
+    font-style: normal;
+    line-height: 0;
+    margin: 0 6px;
+    
+}
+
+.social__img{
+    width: 20px;
+    height: 20px;
+    object-fit: scale-down;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    overflow: visible;
+    transition: .3s all ease-in-out;
+}
+
+.social__item:nth-child(1){
+    margin-left: -1px;
+}
+
+.social__img:hover{
+    border: 2px solid #009688;
+    fill: #009688;
+}
+
+.social__item:hover:first-child > .social__img{
+    content: url(../images/ico-dribbble-h.png);
+    transition: .3s all ease-in-out;
+}
+
+.social__item:hover:nth-child(2) > .social__img{
+    content: url(../images/ico-instagram-h.png);
+    transition: .3s all ease-in-out;
+}
+
+.social__item:hover:nth-child(3) > .social__img{
+    content: url(../images/ico-facebook-h.png);
+    transition: .3s all ease-in-out;
+}
+
+.social__item:hover:last-child > .social__img{
+    content: url(../images/ico-linkedin-h.png);
+    transition: .3s all ease-in-out;
+}
+
+.copyright__text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #282b2f;
+    line-height: 2.7;
 }
